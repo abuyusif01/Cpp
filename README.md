@@ -1,2 +1,0 @@
-# laundry
-school project laundry 
