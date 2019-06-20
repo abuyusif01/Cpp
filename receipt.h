@@ -11,8 +11,7 @@ string type_wash,type,standar_ret,operation;
 float price = 0;
 const int typewash = 4;
 
-void summery()
-{
+void summery(){
 string typ[typewash]={": Warm",": Hot",": Cold",": dryer"};
 	Sleep(2 * 1000);
     cout << "==============================" << endl;
@@ -21,13 +20,13 @@ string typ[typewash]={": Warm",": Hot",": Cold",": dryer"};
 		cout << ": Normal" << endl;
 	}
 	else if (type =="2"){
-	 cout << ": Large" << endl;
+		 cout << ": Large" << endl;
  	}
- 	 if(operation =="1"){
-	cout << setw(17) << left << "Wash Type";
+ 	if(operation =="1"){
+		cout << setw(17) << left << "Wash Type";
 	}
 	else if(operation =="2"){
-	cout << setw(17) << left << "dryer type";
+		cout << setw(17) << left << "dryer type";
 	};
 	if (type_wash == "1")	{
 		cout << typ[0] << endl;
@@ -43,13 +42,13 @@ string typ[typewash]={": Warm",": Hot",": Cold",": dryer"};
 	}
 	cout << setw(17) << left << "Service Time";
 	if (standar_ret == "1"){
-	cout << ": 30 Minutes" << endl; 	
+		cout << ": 30 Minutes" << endl; 	
 	}
 	else if(standar_ret == "2"){
-	cout << ": 20 Minutes" << endl;
+		cout << ": 20 Minutes" << endl;
 	}
 	else if (standar_ret == "3"){
-	cout << ": 10 Minutes" << endl;
+		cout << ": 10 Minutes" << endl;
 	}
 	cout << setw(17) << left << "Total Price" << ": RM"  << price<< endl ;
 	token=price * 2;
