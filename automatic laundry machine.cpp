@@ -20,7 +20,7 @@ wash wash;
 wash.pntr= &wash.add; // POINTERS 
 *wash.pntr = wash.add; // DECLARATION OF POINTERS 
 /*THE PROGRAM START HERE*/
-	do // WHEN YOU TYPE "NEXT" AT THE END OF THIS PROGRAM THE NEXT WILL RETUN TO THIS MAIN FUNCTION THEN THE PROGRAM WILL RUN AGAIN 
+	do // WHEN YOU TYPE "1" AT THE END OF THIS PROGRAM, THE PROGRAM WILL RUN FROM THE MAIN FUNCTION
 	{
 
 		cout << "			--------------------------------------------------\n\n";
