@@ -1,0 +1,46 @@
+1 Restaurant Billing Management System
+2 Chat Application
+/*empty space*/
+4 Weather Information System
+5 ATM Management System
+6 Mail Checker
+7 Web Bot Project
+8 Movie Ticket Management System
+9 Google Search engine Filter
+10 Advanced Calculator
+11 Password Manager
+12 IP Address changer
+13 Student Result system
+14 Online voting system
+15 Online discussion forum
+16 Online Art Gallery
+17 Event Management system
+18 Courier Management system
+19 Article search engine
+20 Matrimonial site
+21 Gym Management system
+22 Spa appointment system
+23 Stadium seat management system
+24 Employee performance review system
+25 XChart - an ultralight Java library for plotting data
+26 bitcoinj - Java implementation of the Bitcoin protocol.
+27 Generating Password and OTP in Java
+28 Currency Management
+29 Number Guessing Game
+30 Online Quiz/survey system
+31 Photo Lab Management System
+32 Smart City Project
+33 Supply Chain Management system
+34 Virtual Private network
+35 Data Encryption
+36 Database Explorer
+37 E-Advertising
+38 Image to Text Converter
+39 Language Emulator
+40 Malware Scanner
+41 Mp4 Video Converter
+42 PDF converter
+43 Voice Chatting and Video Conferencing
+44 Windows Fixer
+45 Online auction
+46 Remote desktop administrator.
