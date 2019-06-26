@@ -6,7 +6,6 @@ using namespace std;
 const int R =5;
  void bar_chart(int A[R]);
 void rating_1(){
-	cout<<"1821881 == Abubakar yusif "<<endl;
 	cout<<"==================================================="<<endl;
 	int A[R], i,j;
 	double ave,total;
@@ -32,7 +31,7 @@ void rating_1(){
    }
     }
     ave=total/R;
-    cout<<"average is :"<<ave;
+    cout<<"average is :"<<ave<<endl;
     return;
 }
 void bar_chart(int A[R]){
