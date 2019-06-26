@@ -4,7 +4,7 @@
 #include "rating.h"
 using namespace std;
 const int Roomm =3;
-string name,state,type,room;
+string name,state,type,room,rate;
 bool x = true;
 void for_(int x);
 int price_(int x_);
@@ -50,13 +50,14 @@ int main (){
         cin>>state;
         //    price_(time);
         display(time);
-        string rate;
          cout<<"would you like to rate our service ? \n";
+         cout<<"you will get a special discount by rating our service \n";
          cin>>rate;
-         if (rate == "yes")
-         {
+         if (rate == "yes"){
              rating_1();
+             display(time);
          }else{
+              display(time);
               cout<<"thank you \n";
                 exit;
          } 
@@ -143,12 +144,14 @@ int price_(int x=0){
     return x;
 }
 void display(int e){
-    int price =0;
-string typ[Roomm]={": single",": double",": family"};
+   int price =0;
+    string typ[Roomm]={": single",": double",": family"};
     cout << "==============================" << endl;
     cout << setw(17) << left << "Customer Name    : "<<name<< endl;
 	cout << setw(17) << left << "Room Type";
-
+    if (rate == "yes"){
+    price -=1;
+    }
 	if (room == "single"){
         price +=3;
 		cout << typ[0] << endl;
