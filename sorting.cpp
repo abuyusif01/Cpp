@@ -1,26 +1,31 @@
 #include <iostream>
 using namespace std;
-int main(){
-    int range;
-    cout<<"enter the range";
-    cin>>range;
-    int arr[range];
-    int i,j;
+const int row =10;
+int main()
+{ 
+    int array[row];
     cout<<"enter the numbers in the array\n";
-    for(i=0; i<=range-1; i++){
-        cin>>arr[i];
+    for (int i = 0; i < row; i++)
+    {
+        cin>>array[i];
     }
-    for(i=0; i<=range-2; i++){
-        for(j=i+1; j<=range-1; j++){
-            int temp;
-            if(arr[i]<arr[j]){
-                temp=arr[i];
-                arr[i] =  arr[j];
-                arr[j] = temp;
+    for (int i = 0; i < row; i++)
+    { 
+        for (int j = i+1; j < row; j++)
+        {
+            if (array[i]<array[j])
+            {
+                int temp;
+                temp = array[i];
+                array[i]=array[j];
+                array[j]=temp;
             }
         }
-    }for (int l=0; l<range; ++l){
-        cout<<endl<<arr[l];
     }
+    for (int i = 0; i <row; i++)
+    {
+    cout<<array[i]<<" ";
+    }
+        
     return 0;
 }
