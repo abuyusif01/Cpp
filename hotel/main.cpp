@@ -1,12 +1,12 @@
 #include <iostream>
-#include <cmath>
-#include <iomanip>
+#include <cmath>				/* just coming back to add some comment cuz i share my repository
+#include <iomanip>				   with someone So i think he's not gonna understand my shitty code */						
 #include "rating.h"
 using namespace std;
 const int Roomm =3;
 string name,state,type,room,rate;
 bool x = true;
-void for_(int x);
+void for_(int x); 
 int price_(int x_);
 void display(int e);
 int main (){
@@ -16,9 +16,10 @@ int main (){
     cin>>name;
     cout<<"enter your time to stay in days NOTE that you cant stay more than 7 days without renewing your payment \n";        
     cin>>time;
+// just making it easy so that i dont have calculate more time.. so the user will only stay in just for 7days unless he pay again.. lol
     do{
         do{   
-            if(time ==1|| time ==2 || time ==3|| time ==4 || time ==5|| time ==6 || time ==7 ){
+            if(time => 1 && time <8){
                 for_(time);
                 break;
             }else{
@@ -153,11 +154,11 @@ void display(int e){
     price -=1;
     }
 	if (room == "single"){
-        price +=3;
+           price +=3;
 		cout << typ[0] << endl;
 	}
 	else if (room == "double"){
-          price +=5;
+           price +=5;
 		cout << typ[1] << endl;
 	}
 	else if (room == "family"){
