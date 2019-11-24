@@ -84,7 +84,6 @@ void tackle(){
     if(__a__.size() > 8  && __a__.size() < 4){
 
     }
-    /*num % 2 ==0 && (num / 2)%2 ==0 */
 }
 
 int main(int args, char** argv){

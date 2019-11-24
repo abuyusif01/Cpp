@@ -17,7 +17,7 @@ std::vector<char> shift___q_1(){
     return __q_1;
 }
 
-void shift___m__(){}// this shit is constant.
+void shift___m__(){} //this shit is constant.
 
 std::vector<char> shift___q__(std::vector<char> &__q__){
     __q__.clear();
