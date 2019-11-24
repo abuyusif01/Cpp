@@ -2,10 +2,11 @@
 #include "../lib/assign.h"
 #include "../lib/shift.h"
 #define space(){std::cout<<"\n";}
-std::vector<int>fine;
-std::vector<int>_add_;
 
+std::vector<int> fine;
+std::vector<int> _add_;
 std::string to_binary(int &x){ //no need to comment this, everyone can understand
+    if(x <0) x *= -1; /*for negative numbers*/
     std::string y{};
     while(x > 0){
         if(x % 2 == 0) y.insert(y.begin(),'0');
@@ -72,6 +73,20 @@ void print(std::vector<char> x){
     std::cout<<"\n";
 }
 
+void first_(){
+    shift___q__(__q__);
+    shift___q_1();
+    shift___a__(__a__);
+    shift___m__();
+}
+
+void tackle(){
+    if(__a__.size() > 8  && __a__.size() < 4){
+
+    }
+    /*num % 2 ==0 && (num / 2)%2 ==0 */
+}
+
 int main(int args, char** argv){
     std::vector<char> Q; //right hand side
     std::vector<char> A; //always start with 0 and left hand side
@@ -87,15 +102,33 @@ int main(int args, char** argv){
     copy_Q = to_binary(num_2);
     std::cout<<"num_1 in bin: "<<copy_M<<std::endl;
     std::cout<<"num_2 in bin: "<<copy_Q<<std::endl;
+    if(num_1 < 0){
+        reverse(copy_M);
+    }
+    if (num_2 < 0){
+        reverse(copy_Q);
+    }
+    std::cout<<"num_1 in bin: "<<copy_M<<std::endl;
+    std::cout<<"num_2 in bin: "<<copy_Q<<std::endl;
     int n = copy_M.size();
     for(int j=0; j<n; j++){
         Q.push_back((copy_Q[j]));
         A.push_back((zero));
         M.push_back((copy_M[j]));
     }
-    assign_all(A,Q);
-    print(shift___q_1());
-    print(shift___q__(__q__));
-    print(shift___a__(__a__));
-    print(__assign_all__);
+    assign_all(A,Q); /*compulsory for this code to run*/
+    first_();
+
+     while(n != 0){
+       if(__q_1.at(0) && __q__.at(__q__.size()-1)){
+            shift___q__(__q__);
+            shift___q_1();
+            shift___a__(__a__);
+            n--;
+            break;
+        }
+    }
+     print(__assign_all__);
 }
+
+
