@@ -81,8 +81,13 @@ void first_(){
 }
 
 void tackle(){
-    if(__a__.size() > 8  && __a__.size() < 4){
-
+    int _tackle_[10];
+    int j=0;
+    for(int i =0; i <1000; i++){
+        if(i && (!(i&(i-1)))){
+            _tackle_[j]=i;
+            j++;
+        }
     }
 }
 
