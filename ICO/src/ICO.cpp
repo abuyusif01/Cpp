@@ -109,7 +109,7 @@ std::vector<char> __q_1;
 std::vector<char> shift___q_1() {
   __q_1.clear(); /*because of buffer*/
   __q_1.push_back(__assign_all__.at(__assign_all__.size() - 1));
-  //    __assign_all__.clear();
+
   return __q_1;
 }
 
@@ -132,13 +132,6 @@ std::vector<char> shift___a__(std::vector<char> &A) {
   return A;
 }
 
-// void first_() {
-//  shift___q__(Q);
-// shift___q_1();
-//  shift___a__(__a__);
-// shift___m__();
-//}
-
 int main(int args, char **argv) {
   std::cout << "Enter number to calculate: ";
   int num_1, num_2;
@@ -160,4 +153,6 @@ int main(int args, char **argv) {
     A.push_back((zero));
     M.push_back((copy_M[j]));
   }
+  assign_all(A, Q);
+  print(__assign_all__);
 }
