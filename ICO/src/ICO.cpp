@@ -11,6 +11,7 @@ char zero = '0';
 
 std::vector<char> fine;
 std::vector<char> _add_;
+std::vector<char> &__add__ = _add_;
 
 std::string
 to_binary(int &x) { // no need to comment this, everyone can understand
@@ -72,9 +73,9 @@ std::vector<char> add(int bn1, int bn2) {
   }
   --i;
   while (i >= 0) {
-    _add_.push_back(sum[i--]);
+    __add__.push_back(sum[i--]);
   }
-  return _add_;
+  return __add__;
 }
 
 void print(std::vector<char> x) {
@@ -94,7 +95,8 @@ int to_char(std::vector<char> &x) {
 }
 
 std::vector<char> __assign_all__;
-void assign_all(std::vector<char> &A, std::vector<char> &Q) {
+void assign_all(std::vector<char> &A, std::vector<char> &Q,
+                std::vector<char> &__assign_all__) {
   __assign_all__.clear();
   for (int i = 0; i < (int)(A.size()); i++) {
     __assign_all__.push_back(A.at(i));
@@ -105,8 +107,8 @@ void assign_all(std::vector<char> &A, std::vector<char> &Q) {
 }
 
 std::vector<char> __q_1;
-
-std::vector<char> shift___q_1() {
+std::vector<char> shift___q_1(std::vector<char> &__q_,
+                              std::vector<char> &__assign_all__) {
   __q_1.clear(); /*because of buffer*/
   __q_1.push_back(__assign_all__.at(__assign_all__.size() - 1));
 
@@ -115,7 +117,8 @@ std::vector<char> shift___q_1() {
 
 void shift___m__() {} // this shit is constant.
 
-std::vector<char> shift___q__(std::vector<char>) {
+std::vector<char> shift___q__(std::vector<char> &Q,
+                              std::vector<char> &__assign_all__) {
   Q.clear();
   for (int i = (int)(__assign_all__.size() - 1); i >= 4; --i) {
     Q.push_back(__assign_all__.at(i - 1));
@@ -123,7 +126,8 @@ std::vector<char> shift___q__(std::vector<char>) {
   return Q;
 }
 
-std::vector<char> shift___a__(std::vector<char> &A) {
+std::vector<char> shift___a__(std::vector<char> &A,
+                              std::vector<char> &__assign_all__) {
   A.clear();
   for (int i = 0; i < (int)((__assign_all__.size() / 2) - 1); i++) {
     A.push_back(__assign_all__.at(i));
@@ -141,18 +145,12 @@ int main(int args, char **argv) {
   copy_Q = to_binary(num_2);
   std::cout << "num_1 in bin: " << copy_M << std::endl;
   std::cout << "num_2 in bin: " << copy_Q << std::endl;
-  if (num_1 < 0) {
-    reverse(copy_M);
-  }
 
-  if (num_2 < 0) {
-    reverse(copy_Q);
-  }
   for (int j = 0; j < 4; j++) {
     Q.push_back((copy_Q[j]));
     A.push_back((zero));
     M.push_back((copy_M[j]));
   }
-  assign_all(A, Q);
+  assign_all(A, Q, __assign_all__);
   print(__assign_all__);
 }
