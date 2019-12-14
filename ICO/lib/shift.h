@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include "assign.h"
 #pragma once
 
@@ -6,33 +5,32 @@
 values, thats the point of whole this
 reassigning values*/
 
-std::vector<char>& __m__ = __M__;
-std::vector<char>& __a__ = __A__;
-std::vector<char>& __q__ = __Q__;
-std::vector<char>& __q_1 = __Q_1__;
+std::vector<char> __q_1;
 
-std::vector<char> shift___q_1(){
-    __q_1.clear(); /*because of buffer*/
-    __q_1.push_back(__assign_all__.at(__assign_all__.size()-1));
-    return __q_1;
+std::vector<char> shift___q_1() {
+  __q_1.clear(); /*because of buffer*/
+  __q_1.push_back(__assign_all__.at(__assign_all__.size() - 1));
+  //    __assign_all__.clear();
+  return __q_1;
 }
 
-void shift___m__(){} //this shit is constant.
+void shift___m__() {} // this shit is constant.
 
-std::vector<char> shift___q__(std::vector<char> &__q__){
-    __q__.clear();
-    for(int i=(int)(__assign_all__.size()-1); i>=4; --i){
-        __q__.push_back(__assign_all__.at(i-1));
-    }
-    return __q__;
+std::vector<char> shift___q__(std::vector<char>) {
+  Q.clear();
+  for (int i = (int)(__assign_all__).size() - 1)
+    ;
+  i >= 4; --i) {
+    Q.push_back(__assign_all__.at(i - 1));
+  }
+  return Q;
 }
 
-std::vector<char> shift___a__(std::vector<char> & __a__){
-    __a__.clear();
-    for (int i=0; i<(int)((__assign_all__.size()/2)-1); i++){
-        __a__.push_back(__assign_all__.at(i));
-    }
-    __a__.insert(__a__.begin(),__assign_all__.at(0));
-    return __a__;
+std::vector<char> shift_A(std::vector<char> &A) {
+  A.clear();
+  for (int i = 0; i < (int)((__assign_all__.size() / 2) - 1); i++) {
+        A.push_back(__assign_all__).at(i));
+  }
+  A.insert(A.begin(), __assign_all__.at(0));
+  return A;
 }
-
