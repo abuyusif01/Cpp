@@ -1,9 +1,11 @@
 #include <bits/stdc++.h>
+#include "../test/check.h"
 
 /*Some bullshit global vars*/
 std::vector < char > Q; // right hand side
 std::vector < char > A; // always start with 0 and left hand side
 std::vector < char > M;
+std::vector < char > __assign_all__;
 std::string copy_Q; // right hand side
 std::string copy_M;
 int n = copy_M.size();
@@ -13,8 +15,7 @@ std::vector < char > fine;
 std::vector < char > _add_;
 std::vector < char > & __add__ = _add_;
 
-std::string
-to_binary(int & x) { // no need to comment this, everyone can understand
+std::string to_binary(int & x) { // no need to comment this, everyone can understand
     if (x < 0)
         x *= -1; /*for negative numbers*/
     std::string y {};
@@ -48,12 +49,12 @@ std::vector < char > to_compliment(int & bn1) { // by name you understand it
     return fine;
 }
 
-std::string reverse(std::string & x) { // same as the rest functions
+std::vector<char> reverse(std::vector<char> & x) { // same as the rest functions
     for (int i = 0; i < (int) x.size(); i++) {
-        if (x[i] == '0') {
-            x[i] = '1';
+        if (x.at(i) == '0') {
+            x.at(i) = '1';
         } else {
-            x[i] = '0';
+            x.at(i) = '0';
         }
     }
     return x;
@@ -85,7 +86,7 @@ void print(std::vector < char > x) {
     std::cout << "\n";
 }
 
-int to_char(std::vector < char > & x) {
+int from_vec_to_int(std::vector < char > &x) {
     std::string str = "";
     for (int i = 0; i < (int) x.size(); i++) {
         str[i] = x.at(i);
@@ -94,8 +95,16 @@ int to_char(std::vector < char > & x) {
     return char_to;
 }
 
-std::vector < char > __assign_all__;
-void assign_all(std::vector < char > & A, std::vector < char > & Q, std::vector < char > & __assign_all__) {
+int from_str_to_int(std::string &x){
+    std::string str ="";
+    for(int i =0; i<x.size(); i++){
+        str[i] = x[i];
+    }
+    int str_to = std::stoi(str);
+    return str_to;
+}
+
+void assign_all(std::vector < char > & A, std::vector < char > & Q, std::vector < char > &__assign_all__) {
     __assign_all__.clear();
     for (int i = 0; i < (int)(A.size()); i++) {
         __assign_all__.push_back(A.at(i));
@@ -116,8 +125,7 @@ std::vector < char > shift___q_1(std::vector < char > & __q_,
 
 void shift___m__() {} // this shit is constant.
 
-std::vector < char > shift___q__(std::vector < char > & Q,
-    std::vector < char > & __assign_all__) {
+std::vector < char > shift___q__(std::vector < char > &Q, std::vector < char > & __assign_all__) {
     Q.clear();
     for (int i = (int)(__assign_all__.size() - 1); i >= 4; --i) {
         Q.push_back(__assign_all__.at(i - 1));
@@ -125,8 +133,7 @@ std::vector < char > shift___q__(std::vector < char > & Q,
     return Q;
 }
 
-std::vector < char > shift___a__(std::vector < char > & A,
-    std::vector < char > & __assign_all__) {
+std::vector < char > shift___a__(std::vector < char > &A, std::vector < char > & __assign_all__) {
     A.clear();
     for (int i = 0; i < (int)((__assign_all__.size() / 2) - 1); i++) {
         A.push_back(__assign_all__.at(i));
@@ -137,19 +144,29 @@ std::vector < char > shift___a__(std::vector < char > & A,
 
 int main(int args, char ** argv) {
     std::cout << "Enter number to calculate: ";
-    int num_1, num_2;
-    std::cin >> num_1;
-    std::cin >> num_2;
-    copy_M = to_binary(num_1);
-    copy_Q = to_binary(num_2);
-    std::cout << "num_1 in bin: " << copy_M << std::endl;
-    std::cout << "num_2 in bin: " << copy_Q << std::endl;
-
+    int num_M, num_Q;
+    std::cin >> num_M;
+    std::cin >> num_Q;
+    copy_M = to_binary(num_M);
+    copy_Q = to_binary(num_Q);
+    check(copy_M);
+    check(copy_Q);
     for (int j = 0; j < 4; j++) {
         Q.push_back((copy_Q[j]));
         A.push_back((zero));
         M.push_back((copy_M[j]));
     }
+    if(num_M < 0){
+        reverse(Q);
+        int temp = from_str_to_int(copy_M);
+        to_compliment(temp);
+    }
+    if(num_Q < 0){
+
+    }
     assign_all(A, Q, __assign_all__);
     print(__assign_all__);
+    std::cout << "num_1 in bin: " << copy_M << std::endl;
+    std::cout << "num_2 in bin: " << copy_Q << std::endl;
+
 }
