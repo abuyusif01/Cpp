@@ -30,9 +30,6 @@ string to_compliment(string &a){
     }
     return result;
 }
-string sub(string &x){
-    return x;
-}
 
 string add(string &a, string &b){
     string result = "";
