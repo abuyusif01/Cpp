@@ -19,7 +19,7 @@ int main (){
 // just making it easy so that i dont have calculate more time.. so the user will only stay in just for 7days unless he pay again.. lol
     do{
         do{   
-            if(time => 1 && time <8){
+            if(time >= 1 && time <8){
                 for_(time);
                 break;
             }else{
@@ -68,25 +68,25 @@ int main (){
 void for_(int x){
     if (x >0){
         switch (x){
-        case 1: cout<<"you have chousen 1 day \n"
+        case 1: cout<<"you have choosen 1 day \n"
                     <<"thank you for coming to our hotel"<<endl;
             break;
-        case 2: cout<<"you have chousen 2 day \n"
+        case 2: cout<<"you have choosen 2 day \n"
                    <<"thank you for coming to our hotel"<<endl;
             break;
-        case 3: cout<<"you have chousen 3 day \n"
+        case 3: cout<<"you have choosen 3 day \n"
                    <<"thank you for coming to our hotel"<<endl;
             break;
-        case 4: cout<<"you have chousen 4 day \n"
+        case 4: cout<<"you have choosen 4 day \n"
                     <<"thank you for coming to our hotel"<<endl;
             break;
-        case 5: cout<<"you have chousen 5 day \n"
+        case 5: cout<<"you have choosen 5 day \n"
                     <<"thank you for coming to our hotel"<<endl;
             break;
-        case 6: cout<<"you have chousen 6 day \n"
+        case 6: cout<<"you have choosen 6 day \n"
                     <<"thank you for coming to our hotel"<<endl;
             break;
-        case 7: cout<<"you have chousen 7 day \n"
+        case 7: cout<<"you have choosen 7 day \n"
                     <<"thank you for coming to our hotel"<<endl;
             break;
         default:
@@ -96,7 +96,7 @@ void for_(int x){
     }
 }
 int price_(int x=0){
-    int time;
+    int time=0;
     string type;
     if(time ==1 && room == "single"){
         x=3;
