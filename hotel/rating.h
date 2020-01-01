@@ -4,11 +4,11 @@
 #include <cmath>
 using namespace std;
 const int R =5;
- void bar_chart(int A[R]);
+void bar_chart(int A[R]);
 void rating_1(){
 	cout<<"==================================================="<<endl;
 	int A[R], i,j;
-	double ave,total;
+	double ave,total=0;
 	bar_chart(A);
 	for(i=0,j=1;i<R;i++,j++){
 		if(A[i]<=5){
