@@ -1,7 +1,7 @@
 #include <iostream>
 int main() {
-    double c,f;
-    std::cout<<"enter the amount of energy \n";
+    double c;
+    std::cout<<"enter the amount of energy in Celcius: ";
     std::cin>>c;
     std::cout<<"the farenheit is :"<<(c*9/5)+32;
     //just kinda learning git hmmm
