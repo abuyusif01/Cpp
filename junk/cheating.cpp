@@ -17,7 +17,7 @@ void find_mean(int list[], int sizeofarray){
         }
     }
 }
-int main(){ 
+int main(){
     int size;
     cout<<"Enter the size of an array: ";
     cin>>size;
