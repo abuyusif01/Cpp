@@ -1,0 +1,25 @@
+/*
+    ● &
+    a = 5; == 0101
+    b = 9; == 1001
+
+    a & b = 0001. because we take one only when all the numbers are 1
+
+    ● |
+    a | b = 1101. because whenever we find one then just take one
+
+    ● ^
+    a ^ b = 1100. when they're not thesame take 1.
+
+    ● =~
+    a =~ a = 0101. because swap 1 with 0
+
+    ● <<
+    b << 1 = 0010. basically move the last bit to the give distance
+
+    ● >>
+    b >> 1 = 0100. opposite of the above one
+
+    b == 0010
+
+*/
