@@ -7,8 +7,7 @@ int get(int a)
 {
     char ch = 'B';
     int flag = 0;
-    if (a == 1)
-        ch = 'A';
+    if (a == 1) ch = 'A';
     do {
         printf("│ ENTER VALUE OF %c: ", ch);
         scanf("%d", &a);
@@ -16,11 +15,9 @@ int get(int a)
             a = a * -1;
             flag = 1;
         }
-        if (9 <= a)
-            printf("│\n\t!INVALID NUMBER.ENTER VALUE (-9 < A < 9)!");
+        if (9 <= a) printf("│\n\t!INVALID NUMBER.ENTER VALUE (-9 < A < 9)!");
     } while (9 <= a);
-    if (flag)
-        a = a * -1;
+    if (flag) a = a * -1;
     return (a);
 }
 
@@ -42,8 +39,7 @@ void binary(int x, int* arr)
     int i, p = x, c[4] = { 0, 0, 0, 1 };
     for (i = 0; i < 4; i++)
         arr[i] = 0;
-    if (x < 0)
-        x = x * -1;
+    if (x < 0) x = x * -1;
     i = 3;
     do {
         arr[i] = x % 2;
@@ -67,11 +63,12 @@ void rshift(int x, int* y)
         y[i] = y[i - 1];
     y[0] = x;
 }
-long fromBin(long n){
+long fromBin(long n)
+{
     long factor = 1;
     long total = 0;
-    while (n != 0){
-        total += (n%10) * factor;
+    while (n != 0) {
+        total += (n % 10) * factor;
         n /= 10;
         factor *= 2;
     }
@@ -163,7 +160,7 @@ int main()
     for (i = 0; i < 8; i++)
         printf("%d", ans[i]);
     for (i = 7; i >= 0; i--) {
-        s = s + (pow(2,z) * ans[i]);
+        s = s + (pow(2, z) * ans[i]);
         z = z + 1;
     }
     if (((a < 0) && (b > 0)) || ((a > 0) && (b < 0)))
