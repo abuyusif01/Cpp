@@ -82,7 +82,6 @@ int List::DeleteNode(int x) {
 	return 0;
 }
 
-
 int List::FindNode(int x) {
 	Node* currNode	=	head;
 	int currIndex	=	1;
