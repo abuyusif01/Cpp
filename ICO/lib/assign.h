@@ -22,7 +22,6 @@ std::vector<char> shift___q_1() {
 }
 
 void shift___m__() {} // this shit is constant.
-
 std::vector<char> shift___q__(std::vector<char>) {
   Q.clear();
   for (int i = (int)(__assign_all__).size() - 1)
